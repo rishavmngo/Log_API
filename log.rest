@@ -67,3 +67,23 @@ Content-Type: application/json
 
 GET http://localhost:5000/api/comment/reply/1 HTTP/1.1
 Content-Type: application/json 
+
+###
+POST http://localhost:5000/api/comment/ HTTP/1.1
+Content-Type: application/json
+
+{
+	"userId": 1,
+	"postId": 3,
+	"comment": "from google"
+}
+
+
+###
+
+POST http://localhost:5000/api/search/ HTTP/1.1
+Content-Type: application/json
+
+{
+	"search_query": "rishav utkars"
+}
