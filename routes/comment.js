@@ -5,7 +5,6 @@ const date = require("date-and-time");
 
 router.get("/:id", async (req, res) => {
 	const { id } = req.params;
-	console.log("params: ", req.params);
 
 	// 	const query =
 	// 		"select c1.id as id, c1.post_id, c1.user_id, c1.comment as comment, c2.id as reply_id, c2.comment as reply  from comments c1 \
@@ -53,7 +52,6 @@ order by
 
 	try {
 		const result = await sql.query(query, [id]);
-		console.log(result.rows);
 		res.send(result.rows);
 	} catch (error) {
 		res.send(error);
@@ -62,12 +60,6 @@ order by
 
 router.get("/reply/:id", async (req, res) => {
 	const { id } = req.params;
-	console.log(req.params);
-
-	// 	const query =
-	// 		"select c1.id as id, c1.post_id, c1.user_id, c1.comment as comment, c2.id as reply_id, c2.comment as reply  from comments c1 \
-	// join comments c2 on c1.id = c2.parent_id where c1.post_id = $1";
-	// const query = "select * from comments where parent_id  = $1";
 
 	const query = `
 select

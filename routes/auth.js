@@ -59,7 +59,6 @@ router.post("/userInfo", async (req, res) => {
 	try {
 		const result = await sql.query(query, [id]);
 		const { password, ...withoutPassword } = result.rows[0];
-		console.log(withoutPassword);
 		res.send(withoutPassword);
 	} catch (error) {
 		res.send("error");
