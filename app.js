@@ -8,6 +8,7 @@ const post = require("./routes/post.js");
 const comment = require("./routes/comment.js");
 const search = require("./routes/search.js");
 const likes = require("./routes/likes.js");
+const profile = require("./routes/profile.js");
 
 const PORT = process.env.SERVER_PORT || 3000;
 const app = express();
@@ -23,6 +24,7 @@ app.use("/api/post", post);
 app.use("/api/comment", comment);
 app.use("/api/search", search);
 app.use("/api/likes", likes);
+app.use("/api/profile", profile);
 
 //listener
 app.listen(PORT, () => {

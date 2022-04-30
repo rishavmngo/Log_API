@@ -39,17 +39,38 @@ Content-Type: application/json
 }
 
 ####
-GET http://localhost:5000/api/post/feed/110 HTTP/1.1
+GET http://localhost:5000/api/post/feed/null HTTP/1.1
 Content-Type: application/json
-
 
 
 ####
-GET http://localhost:5000/api/post/2 HTTP/1.1
+POST http://localhost:5000/api/profile/3 HTTP/1.1
+Content-Type: application/json
+
+{
+	"username":"rishavinmngo"
+}
+
+####
+POST http://localhost:5000/api/post/2 HTTP/1.1
 Content-Type: application/json
 
 
+####
+POST http://localhost:5000/api/profile/follow/8/4 HTTP/1.1
+Content-Type: application/json
 
+{
+	"username":"rishavinmngo"
+}
+
+####
+POST http://localhost:5000/api/profile/followers_list/5 HTTP/1.1
+Content-Type: application/json
+
+{
+	"username":"rytnix"
+}
 ###
 
 POST  http://localhost:5000/api/auth/profile HTTP/1.1

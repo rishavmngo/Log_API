@@ -1,10 +1,13 @@
 const express = require("express");
+
 const router = express.Router();
+
 const sql = require("../connection.js");
 
 router.get("/:user_id/:post_id", async (req, res) => {
 	const user_id = req.params.user_id;
 	const post_id = req.params.post_id;
+	console.log(user_id, post_id);
 	const query = `
 		INSERT
 		into

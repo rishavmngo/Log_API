@@ -26,10 +26,8 @@ ADD
   CONSTRAINT users_pkey PRIMARY KEY (id)
 			`
 		);
-		console.log(result, "runned");
-	} catch (error) {
-		console.log(error);
-	}
+		console.log("users table crated");
+	} catch (error) {}
 })();
 
 (async () => {
@@ -49,9 +47,9 @@ ADD
   CONSTRAINT posts_pkey PRIMARY KEY (id)
 			`
 		);
-	} catch (error) {
-		console.log(error);
-	}
+
+		console.log("post table crated");
+	} catch (error) {}
 })();
 
 (async () => {
@@ -65,9 +63,8 @@ ADD
   CONSTRAINT post_likes_pkey PRIMARY KEY (post_id)
 			`
 		);
-	} catch (error) {
-		console.log(error);
-	}
+		console.log("post likes table crated");
+	} catch (error) {}
 })();
 
 (async () => {
@@ -90,9 +87,8 @@ ADD
   CONSTRAINT comments_pkey PRIMARY KEY (id)
 			`
 		);
-	} catch (error) {
-		console.log(error);
-	}
+		console.log("comments table crated");
+	} catch (error) {}
 })();
 
 module.exports = pool;
